@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>MirrorLine - MirrorBrowser</title>
+    <meta name="description" content="MirrorLine 是一个免费开源的镜像浏览器，你可以在这里搜索并找到你想找的网站的镜像站！">
+    <meta name="keywords" content="镜像,mirror,browser,search,learn,中文">
+    <link rel="stylesheet" href="css/milligram.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/message.min.css">
+    <script src="js/message.min.js"></script>
+    <script>
+      $( document ).ready( () => {
+        $( ".menu" ).click( () => {
+          $( ".sidebar" ).toggleClass( "sidebar-show" )
+        })
+        $( "#back" ).click( () => {
+          window.location.href = "./"
+        })
+        Qmsg.success( "欢迎喵！" )
+      })
+    </script>
+    <script src="js/index.js"></script>
+  </head>
+  <body>
+    <div class="navbar">
+      <span class="menu">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </span>
+      <h4 class="title" style="display: inline-block" id="back">MirrorLine</h4>
+      <h4 class="title float-right" onclick="(window.location.href = 'https://bgithub.xyz/Love-Kogasa/MirrorLine')">
+        <img src="imgs/github.png" style="width: 1.9ch; margin-bottom: -0.3ch;">
+        Github
+      </h4>
+    </div><div class="sidebar">
+      <br>
+      <h2 class="title">Menu</h2>
+      <a class="li" href="https://bgithub.xyz/Love-Kogasa/MirrorLine/issue">- 提交镜像站</a><br>
+      <a class="li" href="https://bgithub.xyz/Love-Kogasa/MirrorLine/blob/main/LICENSE">- MIT License</a>
+      <hr>
+      <h3 class="title">免责声明</h3>
+      <p class="li">本站点仅供各位大佬参考，学习使用。站内所有镜像站与本站无关。您在镜像站点内的行为同样与本站无关。请在本地相关法律法规允许情况下使用镜像站</p>
+      <hr>
+      <h3 class="title">技术使用</h3>
+      <a class="li" href="https://gitee.com/leisureLXY/qmsg">- Message.js</a>
+      <a class="li" href="https://jquery.com">- jQuery.js</a><br>
+      <a class="li" href="https://milligram.io/">- Milligram</a>
+      <a class="li" href="https://api.ahfi.cn/">- 网页信息获取</a><br>
+      <a class="li" href="https://finicounter.eu.org/">- FiniCounter</a>
+      <a class="li" href="https://t.mwm.moe">- 随机二次元</a>
+      <hr>
+      <a class="li">项目Github仓库</a><br>
+      <span class="li">Copyright 2024 <a href="https://bgithub.xyz/Love-Kogasa">@Love-Kogasa</a></span>
+      <div class="li">如果显示<img src="imgs/site.png" class="icon">就是无法正常加载ico喵w</div>
+    </div><br><br>
+    <center>
+      <form method="GET" action="search.html" style="margin-bottom: -1.5ch;">
+        <input type="text" id="search" placeholder="Github" style="width: 70vw" name="search">
+        <!-- 自定义类不生效:( -->
+        <input type="submit" class="button btn" value="搜索" style="background-color: #000;">
+      </form>
+      <div id="contain">
+        资源搜索中，请稍等...
+      </div>
+      <!--<div class="card">
+        <img src="imgs/github.png" class="icon">
+        <h4 class="title">GitHub · Build and ship software on a single, collaborative platform · GitHub</h4> <a>(bgithub.xyz)</a>
+        <div>GitHub is where people build software. More than 150 million people use GitHub to discover, fork, and contribute to over 420 million projects.</div>
+        <div align="right">
+          <font color="green" size=2>200ok & 100ms</font>
+        </div>-->
+      </div>
+    </center>
+  </body>
+</html>

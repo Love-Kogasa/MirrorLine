@@ -5,7 +5,6 @@
 > 感谢各位朋友的浏览与支持！希望本站可以越做越好  
 
 # 使用到的技术
-这里是MirrorLine所用到的东东
 <li><a class="li" href="https://gitee.com/leisureLXY/qmsg">Message.js</a></li>
 <li><a class="li" href="https://jquery.com">jQuery.js</a></li>
 <li><a class="li" href="https://milligram.io/">Milligram</a></li>

@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>MirrorLine - MirrorBrowser</title>
+    <meta name="description" content="MirrorLine 是一个免费开源的镜像浏览器，你可以在这里搜索并找到你想找的网站的镜像站！">
+    <meta name="keywords" content="镜像,mirror,browser,search,learn,中文">
+    <link rel="stylesheet" href="css/milligram.min.css">
+    <link rel="stylesheet" href="css/message.min.css">
+    <script src="js/message.min.js"></script>
+    <script src="js/finicounter.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/pc.css" media="screen and (min-width: 1024px)">
+    <script>
+      $( document ).ready( () => {
+        $( ".menu" ).click( () => {
+          $( ".sidebar" ).toggleClass( "sidebar-show" )
+        })
+        $.getJSON( "https://api.github.com/repos/Love-Kogasa/MirrorLine/contributors", ( data ) => {
+          data.forEach( ( value ) => {
+            $( "#contributors" ).append( $( `<img src="${value.avatar_url}" class="avatar">` ) )
+          })
+        })
+        Qmsg.success( "欢迎喵！" )
+      })
+    </script>
+    <style>
+      body {
+        background-image: url( "https://t.mwm.moe/pc" );
+        background-size: auto 100vh;
+        background-position: center 0px;
+      }
+      .avatar {
+        width: 7ch;
+        height: 7ch;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar">
+      <span class="menu">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </span>
+      <h4 class="title" style="display: inline-block">MirrorLine</h4>
+      <h4 class="title float-right" onclick="(window.location.href = 'https://bgithub.xyz/Love-Kogasa/MirrorLine')">
+        <img src="imgs/github.png" style="width: 1.9ch; margin-bottom: -0.3ch;">
+        Github
+      </h4>
+    </div><div class="sidebar">
+      <br>
+      <h2 class="title">Menu</h2>
+      <a class="li" href="https://bgithub.xyz/Love-Kogasa/MirrorLine/issue">- 提交镜像站</a><br>
+      <a class="li" href="https://bgithub.xyz/Love-Kogasa/MirrorLine/blob/main/LICENSE">- MIT License</a>
+      <hr>
+      <h3 class="title">免责声明</h3>
+      <p class="li">本站点仅供各位大佬参考，学习使用。站内所有镜像站与本站无关。您在镜像站点内的行为同样与本站无关。请在本地相关法律法规允许情况下使用镜像站</p>
+      <hr>
+      <h3 class="title">技术使用</h3>
+      <a class="li" href="https://gitee.com/leisureLXY/qmsg">- Message.js</a>
+      <a class="li" href="https://jquery.com">- jQuery.js</a><br>
+      <a class="li" href="https://milligram.io/">- Milligram</a>
+      <a class="li" href="https://api.ahfi.cn/">- 网页信息获取</a><br>
+      <a class="li" href="https://finicounter.eu.org/">- FiniCounter</a>
+      <a class="li" href="https://t.mwm.moe">- 随机二次元</a>
+      <hr>
+      <a class="li">项目Github仓库</a><br>
+      <span class="li">Copyright 2024 <a href="https://bgithub.xyz/Love-Kogasa">@Love-Kogasa</a></span>
+      <div class="li">本页访问量: <span id="finicount_views"></span></div>
+      <div class="li">如果显示<img src="imgs/site.png" class="icon">就是无法正常加载ico喵w</div>
+    </div><br><br><br>
+    <div class="main">
+      <center>
+        <h1 class="title">MirrorLine</h1>
+        <form method="GET" action="search.html">
+          <input type="text" id="search" placeholder="Github" name="search">
+          <input type="submit" class="button btn" value="搜索" style="background-color: #000;">
+        </form>
+        <div>
+          <a href="https://kkgithub.com"><img src="imgs/github.png" class="icon"> kkgithub</a>
+          <a href="https://pixiv.moe"><img src="https://pixiv.moe/assets/favicon.ico?v=2024.02" class="icon"> PixivMoe</a><br>
+          <a href="https://npmmirror.com/"><img src="https://npmmirror.com/favicon.ico" class="icon"> npmmirror</a>
+        </div><br>
+        <p>简单快捷的寻找你想找的镜像或镜像站<br><font size=2>Copyright 2025 <a href="https://bgithub.xyz/Love-Kogasa">@Love-KogasA</a></font></p>
+        <br>
+        <h4 class="title">贡献者</h4>
+        <div id="contributors"></div><br>
+      </center>
+    </div>
+  </body>
+</html>
